@@ -1,0 +1,40 @@
+1.Beans is known as objects which are managed by spring IOC container.
+
+2.IOC stands for Inversion Of Control and it is a process of defining the dependencies by without creating them
+
+public class Company {
+    private Address address;
+
+    public Company(Address address) {
+        this.address = address;
+    }
+
+    // getter, setter and other properties
+}
+
+public class Address {
+    private String street;
+    private int number;
+
+    public Address(String street, int number) {
+        this.street = street;
+        this.number = number;
+    }
+
+    // getters and setters
+}
+
+Address address = new Address("High Street", 1000);
+Company company = new Company(address);
+
+This is the traditional method of creating objects it will lead to dependencies here we can see that Company class is dependent on Address class.
+
+public class Config {
+    @Bean
+    public Address getAddress() {
+        return new Address("High Street", 1000);
+    }
+}
+
+If we define our dependencies with @Bean annotation then spring IOC container will create the dependency and inject the dependency.	
+

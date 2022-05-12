@@ -1,0 +1,42 @@
+git init . (To create a working directory)
+
+git config --global user.name "<username>"
+
+git config --global user.mail "<mail_address>"
+
+git config (To see the all the available options)
+
+git add <file_name> (To add the file to the staging area)
+
+git add . (To add all the files to the staging area)
+
+git status (To know the status of staging area and commits)
+
+git commit -m "<commit_message>" (To commit with message)
+
+git log (To see the logs of the commits)
+
+git show <Hash_key> (To see the particular log/commit )
+
+git restore <file_name> (To restore the changes) 
+
+git branch (To know the current branch) 
+
+git branch -a (To see all the branches in local)
+
+git branch -r (To see all the branches in remote server)
+
+git branch <branch_name> (To create a branch in local)
+
+git branch -d <branch_name> (To delete a branch in local)
+
+git checkout <branch_name> (To checkout to the particular branch)
+
+git checkout -  (To checkout to the previous branch)
+
+git checkout -b <branch_name>  (It will create a branch in local and checkout to that branch)
+
+git push  (To push the code to the remote server)
+
+git push -u origin <branch_name> (To push the code to the remote server by creating a branch in remote server)
+

@@ -36,5 +36,5 @@ public class Config {
     }
 }
 
-If we define our dependencies with @Bean annotation then spring IOC container will create the dependency and inject the dependency.	
+If we define our dependencies with @Bean annotation then spring IOC container will create the dependency and inject the dependency	
 

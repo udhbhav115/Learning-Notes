@@ -1,40 +1,62 @@
-1.Beans is known as objects which are managed by spring IOC container.
+1.Beans are known as objects which are managed by spring IOC container.
 
-2.IOC stands for Inversion Of Control and it is a process of defining the dependencies by without creating them
+2.IOC stands for Inversion Of Control and it is responsible for instantiating,wiring(Auto wiring),Managing the life cycle of beans(objects)
 
-public class Company {
-    private Address address;
+3.IOC containers are of two types.
+   1.AppicationContext(useful for Enterprise level application)
+   2.BeanFactory(useful for lightweight applications)
 
-    public Company(Address address) {
-        this.address = address;
-    }
+4.ApplicationContext:
+   ex:ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
+      -> We need to pass configuration class(AppConfig.class) as an argument for AnnotationConfigApplicationContext.
+      -> The configuration class should contain the bean definitions.
 
-    // getter, setter and other properties
+---------------------------------------------------------Example------------------------------------------------------
+
+
+public class Application {
+	
+	public static void main(String[] args) {
+		
+		ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
+		Samsung samsung=context.getBean(Samsung.class);
+		samsung.getRedmi().redmi();	
+	}
 }
 
-public class Address {
-    private String street;
-    private int number;
 
-    public Address(String street, int number) {
-        this.street = street;
-        this.number = number;
-    }
-
-    // getters and setters
+@Configuration
+public class AppConfig {
+	@Bean
+	public Samsung getObject() {
+		return new Samsung();
+	}
+	
+	@Bean
+	public Redmi getRedmiObject() {
+		return new Redmi();
+	}
 }
 
-Address address = new Address("High Street", 1000);
-Company company = new Company(address);
 
-This is the traditional method of creating objects it will lead to dependencies here we can see that Company class is dependent on Address class.
+public class Samsung {
+	
+	@Autowired
+	private Redmi redmi;
+	
+	public Redmi getRedmi() {
+		return redmi;
+	}
 
-public class Config {
-    @Bean
-    public Address getAddress() {
-        return new Address("High Street", 1000);
-    }
+	public void setRedmi(Redmi redmi) {
+		this.redmi = redmi;
+	}
 }
 
-If we define our dependencies with @Bean annotation then spring IOC container will create the dependency and inject the dependency	
+public class Redmi {
+	public void redmi() {
+		System.out.println("In redmi function");
+	}
+}
+
 

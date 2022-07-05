@@ -1,0 +1,9 @@
+-------------------------------------------KAFKA--------------------------------------------------------
+
+1.To run the zookeeper:Navigate the kafka folder and execute the following command
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+2.To run the Kafka:Navigate the kafka folder and execute the following command
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+ 

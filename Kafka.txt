@@ -6,4 +6,13 @@
 2.To run the Kafka:Navigate the kafka folder and execute the following command
 .\bin\windows\kafka-server-start.bat .\config\server.properties
 
+3.To create a topic:Navigate the kafka folder and execute the following command.
+Note:kafka and zookeeper should be UP
+kafka-topics.bat --bootstrap-server localhost:9092 --create --topic <topic_name> --partitions <No_of_partitions> --replication-factor <replication_factor_value>
+
+4.List of topics:Navigate the kafka folder and execute the following command.
+kafka-topics.bat --bootstrap-server localhost:9092 --list
+
+5.Describe to topic::Navigate the kafka folder and execute the following command.
+kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic <topic_name>
  

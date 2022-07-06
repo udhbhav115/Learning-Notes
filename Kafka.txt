@@ -13,6 +13,24 @@ kafka-topics.bat --bootstrap-server localhost:9092 --create --topic <topic_name>
 4.List of topics:Navigate the kafka folder and execute the following command.
 kafka-topics.bat --bootstrap-server localhost:9092 --list
 
-5.Describe to topic::Navigate the kafka folder and execute the following command.
+5.Describe to topic:Navigate the kafka folder and execute the following command.
 kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic <topic_name>
+
+6.Kafka-console-producer:
+  ->kafka console producer is used to write the data into the topic
+  ->kafka console producer writes with having key and without having key(null)
+  ->If we writes the data without key(null) then it distributes along all partitions.
+  ->If we writes the data with key then it distributes to specific partition.
+
+  6.1 write the data into the topic without key(null):Navigate the kafka folder and execute the following   command.
+  kafka-console-producer.bat --bootstrap-server localhost:9092 --topic <topic_name>
+  then it asks for the data write the data into the topic and press CTRL+C to exit.
+
+  6.2 write the data into the topic with key:Navigate the kafka folder and execute the following command.
+  kafka-console-producer.bat --bootstrap-server localhost:9092 --topic <topic_name> --property parse.key=true --property key.separator=:
+  then it asks for the data write the data into the topic and press CTRL+C to exit.
+
+  6.2 If we write the data into specific topic which doesn't exists then kafka will automatically create the topic with partitions as 1 and replication factor as 1 and write into that specific topic
+
+
  

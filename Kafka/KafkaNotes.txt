@@ -1,0 +1,14 @@
+1.What is Kafka.?
+Kafka is a highly Scalable platform for creating and processing the data as streams is knows as Kafka.
+Ex:GoogleMaps.
+2.what is kafka Architecture.?
+produce poduce the data into the broker and consumer consumes the data from broker is known as kafka Achitecture.
+  a.Here borker is known as kafka.
+3.KafkaTopic->partitions->segments->offSet.
+  a.Each message will have different offset.
+  b.Messages are stored in log file.
+  c.index file contains the offset address.
+  d.timestamp file contains arrival message time
+4.What is KafkaCluster
+KafkaCluster contains the several brokers as in the FCFS mode the first broker having the additional task of managing the all borker which is also known as Controller.
+  a.All the broker details will available in zookeper

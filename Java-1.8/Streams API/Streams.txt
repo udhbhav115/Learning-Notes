@@ -1,0 +1,33 @@
+-> In which package Stream Api is available?
+java util.stream package
+
+-> Can we able to reuse the stream?
+No,we cannot able to reuse the stream if we have performed terminal operation on stream and try to reuse them again then IllegalStateExeception will be generated.
+
+Example Program:
+stream.filter(i->i>0).forEach(i->System.out.println(i));
+System.out.println(stream.filter(i->i>0).count()); // In this case it will generate IllegalStateExeception
+
+To avoide the IllegalStateExeception we need to use Supplier interface which contains get method it will help to give a new instance of the stream.
+
+Example Program:
+
+Supplier<IntStream> supplier=IntStream.of(12,23,34,86,-12,-11);
+supplier.get().filter(i->i>0).forEach(i->System.out.println(i));
+System.out.println(supplier.get().filter(i->i>0).count());
+
+-> Why we cannot able to reuse the stream?
+It is because we have applied the terminal operation on the stream so we have to create a new instance to reuse the stream.
+
+Example Program:
+stream.filter(i->i>0).count() // here stream has been ended by applying terminal operation(count function)
+
+-> What is the use of Supplier interface?
+Supplier interface was introduced since java 8 to implement the functional programming it will be useful when we don't want to supply anything and obtain a result at a same time in the form of T stands for class from the get method
+
+internal Implementation
+T get();
+
+
+
+

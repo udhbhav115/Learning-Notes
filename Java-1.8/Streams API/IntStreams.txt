@@ -1,0 +1,2 @@
+1.What is IntStream.?
+IntStream is a sequence of primitive int valued elements which is an interface that extends the BaseStream interface.

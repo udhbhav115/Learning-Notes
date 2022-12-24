@@ -17,7 +17,7 @@ supplier.get().filter(i->i>0).forEach(i->System.out.println(i));
 System.out.println(supplier.get().filter(i->i>0).count());
 
 -> Why we cannot able to reuse the stream?
-It is because we have applied the terminal operation on the stream so we have to create a new instance to reuse the stream.
+It is because we have applied the terminal operation on the stream so we cannot able to reuse the stream fot that we have to create a new instance to reuse the stream.
 
 Example Program:
 stream.filter(i->i>0).count() // here stream has been ended by applying terminal operation(count function)

@@ -1,3 +1,15 @@
+-> what is stream pipeline?
+Stream pipeline is a chain of stream source,intermediate operations and terminal operations
+
+-> What is Lazy Invocation in streams?
+Intermediate operations are lazy this means that intermediate operations will be invoked only if terminal operations are required.
+
+Example program:
+IntStream.of(11,20,30,40,50).filter(i->{
+	System.out.println("in filter method");
+	return i%2==0;
+	}).findFirst().getAsInt(); // in this case the sysout will execute 2 times because of lazy loading.
+
 -> In which package Stream Api is available?
 java util.stream package
 
@@ -27,6 +39,11 @@ Supplier interface was introduced since java 8 to implement the functional progr
 
 internal Implementation
 T get();
+
+How many type of primitive type streams are available?
+3 types of primitive type streams they are IntStream,LongStream,DoubleStream. Since Stream interface is a generic type(Stream<T>) so we cannot create stream for primitive types.
+
+
 
 
 

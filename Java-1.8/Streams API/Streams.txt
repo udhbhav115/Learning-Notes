@@ -40,6 +40,6 @@ Supplier interface was introduced since java 8 to implement the functional progr
 internal Implementation
 T get();
 
-How many type of primitive type streams are available?
+-> How many type of primitive type streams are available?
 3 types of primitive type streams are available they are IntStream,LongStream and DoubleStream.Since Stream interface is a generic type(Stream<T>) so we cannot create stream for primitive types.
 

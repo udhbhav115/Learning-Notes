@@ -1,0 +1,32 @@
+-> What is lambda expression?
+Lambda expression is a feature introduced in java 8 which helps to implement a one abstract method interface(functional interface) in a Consise way(easier way) rather that writing all the bolierplate code with the help of Function Interface.
+
+Example:
+@FunctionalInterface
+interface Test{
+	void print(String string);
+}
+
+Test test=new Test() {
+	@Override
+	public void print(String string) {
+		System.out.println("Hello "+string);
+		}
+}; // orginal implementation of interface without extends to any class
+
+Test test2=i->System.out.println("Hello "+i); //Consise way to implement interface
+
+In both cases we will get same output.
+
+-> What is Function Interface?
+It is an easier way to implement functional interface. the Function interface is also a functional interface
+
+Syntax:Function<T,R> function; // <T> the type of the input to the function<R> the type of the result of the function
+
+Example:Function<String, String> function=(i)->"Hello "+i;
+		
+		String apply = function.apply("Udhbhav");
+		
+		System.out.println(apply); // It will print Hello Udhbhav
+		
+-> An interface which contains only one abstract method and many default,static methods can also called as functional interface.

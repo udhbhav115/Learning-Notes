@@ -29,4 +29,4 @@ Example:Function<String, String> function=(i)->"Hello "+i;
 		
 		System.out.println(apply); // It will print Hello Udhbhav
 		
--> An interface which contains only one abstract method and many default,static methods can also called as functional interface.
+-> An interface which contains only one abstract method and as many as default,static methods is called as functional interface

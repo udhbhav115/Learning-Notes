@@ -1,0 +1,58 @@
+-> What are the Java8 features.?
+Ans: The Java8 features are Functional Interface,Lambda Expression,Method References,Streams API,forEach method,static methods in interface,default methods,Optional Class,Collectors Class.
+
+-> What is functional Programming?
+Ans: Basically functional programming is a style of writing computer programs that we think that it is simply evaluating the mathematical expressions.
+
+	Ex; If we want to print the elements in the list we have to write the boilerplate code like write a for loop initialize the variable have to iterate till the size ends from functional programming we don't need to bother about all the things we will directly make use of forEach method and print the elements.
+	
+-> What is Functional Interface?
+Ans: An interface which consists of only one abstract method and any number of static methods,default methods,Object class methods is known as Functional Interface.Functional interface is also called as Single Abstract Method.
+
+The variables inside interface are static and methods are abstract by default.
+
+-> Can we extend a functional interface with non functional interface?
+Ans:Yes we can extend but non functional interface should not contains an abstract method.
+
+-> What are the predefined functional interfaces in java?
+Ans: There are many predefined functional interfaces are 
+1.Function<T,R> = It represents a function takes one argument and return the result.
+2.Predicate<T> =  It represents a boolean valued function with one argument with no result.
+3.Consumer<T> = It represents an operation that accepts one argument with no result.
+
+-> What is the package name which all perdefined functional interfaces available?
+Ans:java.util.function package
+
+-> Can we consider an interface consists of any number of static methods or any number of default methods as functional interface?
+Ans: No we cannot consider the above condition as functional interface because it doesn't contains an abstract method
+
+-> Name some Object class methods?
+Ans: String toString(),int hashCode(),boolean equals() etc.
+
+-> What are Lambda Expressions?
+Ans: Lambda Expression is an anonymous method that is used to implement the abstract method of a functional Inteface.
+
+-> Can we pass lambda expression to a method as an argument?
+Ans: Yes we can pass lambda expression to a method but it has to be an abstract method in an interface or default,static methods in an interface. need to see one example.
+
+-> what is the syntax of lambda expression?
+Ans: It consists of three parts 1.Set of parameterized fields(0 or more),2.Arrow key(->),3. body
+
+-> Can we use local variables(outer scope) inside Lambda expression?
+Ans: Yes we can use the outer scope variables in lambda expression but it has to be effectively final.
+
+-> What is effectively final?
+Ans: A variable is consider as effectively final variable if it is not modified after initialization in the local block.
+
+->int count=10;
+  count=10+100;
+  Runnable runnable=()->{
+	System.out.println("hello world "+count);
+  };
+  runnable.run();
+  
+Can you say what is error in the code?
+Ans: A variable used in the lambda function must be effectively final.Here count value is intialized two times so we cannot consider "count" variable as an effectively final.
+
+-> 
+	

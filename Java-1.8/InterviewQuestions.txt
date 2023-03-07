@@ -4,7 +4,7 @@ Ans: The Java8 features are Functional Interface,Lambda Expression,Method Refere
 -> What is functional Programming?
 Ans: Basically functional programming is a style of writing computer programs that we think that it is simply evaluating the mathematical expressions.
 
-	Ex; If we want to print the elements in the list we have to write the boilerplate code like write a for loop initialize the variable have to iterate till the size ends from functional programming we don't need to bother about all the things we will directly make use of forEach method and print the elements.
+	Ex; If we want to print the elements in the list we have to write the boilerplate code like write a for loop initialize the variable have to iterate till the size ends from functional programming we don't need to bother about all the things we will directly make use of forEach method and print the elements. >>>> What Has to be done but not how
 	
 -> What is Functional Interface?
 Ans: An interface which consists of only one abstract method and any number of static methods,default methods,Object class methods is known as Functional Interface.Functional interface is also called as Single Abstract Method.
@@ -54,5 +54,20 @@ Ans: A variable is consider as effectively final variable if it is not modified 
 Can you say what is error in the code?
 Ans: A variable used in the lambda function must be effectively final.Here count value is intialized two times so we cannot consider "count" variable as an effectively final.
 
+-> What is method reference in java?
+Ans: It is used to refer a method of a functional interface with the help of scope resolution operator we can access the methods.With the help of method references we can access static,instance methods and constructors. Ex Hello is a class name Hello::new it will access the constructor.
+
+-> What is streams API?
+Ans: Streams are basically a pipeline which takes input as a lambda expression to process the sequence of elements
+
+-> What is Stream pipeline?
+Ans: stream pipeline is a chain of source,intermediate operations and terminal operaions.
+
+-> What is the package of stream?
+Ans:java.util.stream package
+
 -> 
+
+
+
 	

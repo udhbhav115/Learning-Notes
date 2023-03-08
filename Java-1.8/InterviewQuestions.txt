@@ -64,9 +64,40 @@ Ans: Streams are basically a pipeline which takes input as a lambda expression t
 Ans: stream pipeline is a chain of source,intermediate operations and terminal operaions.
 
 -> What is the package of stream?
-Ans:java.util.stream package
+Ans: java.util.stream package
 
--> 
+-> Which functional interface does map internally contains?
+Ans: Internally it contains Function<T,R> interface.
+
+-> Which functional interface does filter internaly contains?
+Ans: Internally it contains Predicate<T> interface.
+
+-> What is Map in streams?
+Ans: Map is a predefined method of a stream which will convert the stream from one Object type to another Object type.It is a one to one relationship.The Internal implementation of map is Function interface which takes value and return a value.
+
+-> What is flatMap in streams?
+Ans: flatMap is an extension of Map which is also used to convert the stream from one object to another object.Apart from that it will do a flattening.
+Ex:If we have a list of lists which we want to convert into stream in this case flatMap is used
+
+-> What is reduce in streams?
+Ans: Reduce is a terminal operation which is used to produce a single value from the sequence of elements or stream. internally it contains BinaryOperator<T> which internally implements BiFunction<T,T,R>.
+
+-> What is parallelStreams?
+Ans: Usually any java code that has only one processing stream which executes sequentially,but in case of parallel streams it will divide the stream into 1 or more streams which will execute parallelly on different cores and it will combine all the outputs into a single stream this is the reason why it will give different outputs for every run. paraller(),parallerStream().
+
+-> What are the difference between collection and stream?
+Ans: Collection contains elements while stream doesn't contains any data structure so it will not contains any elements.Practically Streams is a view where it will work on a collection to process the collection but it will not modify the original collection.
+
+-> What is the difference between intermediate operaions and terminal operaions?
+Ans: The main difference is intermediate operations like map and filter will return a stream so that we can apply intermediate operaions again but incase of terminal operaions like collect max,min etc we cannot reuse the stream.
+
+-> What is peek method?
+Ans: peek method is used to know present situation of a stream pipeline in case of debugging it will be very useful.
+
+-> What are difference between static methods and default methods in interface?
+Ans: These two methods are used to implement the body in the interface itself but if can implement the interface with any other class we can able to override the default method but not static method,we can call the default method via implemented class object but cannot the static method.
+
+
 
 
 

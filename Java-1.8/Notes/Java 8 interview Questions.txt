@@ -76,6 +76,9 @@ Ans: Internally it contains Predicate<T> interface.
 -> What is Map in streams?
 Ans: Map is a predefined method of a stream which will convert the stream from one Object type to another Object type.It is a one to one relationship.The Internal implementation of map is Function interface which takes value and return a value.
 
+-> Can we able to reuse the stream?
+No,we cannot able to reuse the stream if we have performed terminal operation on stream and try to reuse them again then IllegalStateExeception will be generated.
+
 -> What is flatMap in streams?
 Ans: flatMap is an extension of Map which is also used to convert the stream from one object to another object.Apart from that it will do a flattening.
 Ex:If we have a list of lists which we want to convert into stream in this case flatMap is used

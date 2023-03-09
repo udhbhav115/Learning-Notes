@@ -1,5 +1,6 @@
 -> What are the Java8 features.?
-Ans: The Java8 features are Functional Interface,Lambda Expression,Method References,Streams API,forEach method,static methods in interface,default methods,Optional Class,Collectors Class.
+Ans: The Java8 features are Functional Interface,Lambda Expression,Method References,Streams API,forEach method,static methods in interface,default methods,Optional Class,Collectors Class,Parallel Array Sorting
+StringJoiner
 
 -> What is functional Programming?
 Ans: Basically functional programming is a style of writing computer programs that we think that it is simply evaluating the mathematical expressions.
@@ -96,6 +97,19 @@ Ans: peek method is used to know present situation of a stream pipeline in case 
 
 -> What are difference between static methods and default methods in interface?
 Ans: These two methods are used to implement the body in the interface itself but if can implement the interface with any other class we can able to override the default method but not static method,we can call the default method via implemented class object but cannot the static method.
+
+-> What is parallel array sorting?
+Ans: Parallel array sorting is a new method in Arrays class which is used to sort an array apart from that we can also specify the start index and end index to sort values in that range.
+
+-> What is StingJoiner?
+Ans: StingJoiner is a new feature introduced in java8 which is used to join the strings
+Ex:StingJoiner joiner=new StringJoiner(",");
+   joiner.add("Udhbhav");
+   joiner.add("Thandra");
+   sysout(joiner);
+   OUTPUT:Udhbhav,Thandra
+   
+-> What 
 
 
 
